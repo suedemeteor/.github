@@ -1,0 +1,47 @@
+name: Epic
+description: A larger outcome, delivered through several stories. Plan it before any of it is built.
+type: Epic
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Title the epic with its outcome in plain words. After creating it, add each story with "Create sub-issue".
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What is true when this epic is done, and for whom?
+    validations:
+      required: true
+
+  - type: textarea
+    id: demonstration
+    attributes:
+      label: Demonstration
+      description: How the owner will see it working, step by step.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screens
+    attributes:
+      label: Screens
+      description: >-
+        The views and emails this epic adds or changes, or "None". An epic that has some starts with a design
+        story whose mockups the owner approves before any of them is built
+        (docs/engineering-notes/ui-design-skills.md).
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of Scope
+      description: What this epic deliberately leaves out.
+
+  - type: textarea
+    id: questions
+    attributes:
+      label: Open Questions
+      description: Questions that block its stories, numbered Q1, Q2 so a story can cite them.

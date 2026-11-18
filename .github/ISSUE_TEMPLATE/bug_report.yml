@@ -1,0 +1,70 @@
+name: Bug report
+description: Report a reproducible bug.
+title: "[Bug]: "
+labels: ["bug"]
+type: Bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: A clear, concise description of the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Numbered steps to reliably reproduce the bug. Be specific.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Result
+      description: What should happen when following the steps above?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Result
+      description: What actually happens instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: fixed
+    attributes:
+      label: Fixed When
+      description: Each item must be checkable against the running code. A bug reaches Ready only once one is written.
+      value: |
+        - [ ]
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, OS and device, or the runtime and version, as applies.
+      placeholder: e.g. Chrome 142 on Windows 11, desktop
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Screenshots, screen recordings, or relevant logs. Drag and drop files or paste links.
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Optional. Suspected cause, edge cases, frequency, related issues, or possible solutions.

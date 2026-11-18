@@ -1,0 +1,30 @@
+name: Task
+description: Technical work that is no slice of a feature, such as tooling, CI or a refactor.
+type: Task
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What and Why
+      description: The change, and what goes wrong or stays slow without it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: Done When
+      description: Each item must be checkable.
+      value: |
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: plan
+    attributes:
+      label: Implementation Plan
+      description: >-
+        The steps that build it, written in the planning session: which files change and how, and the decisions
+        already made, so the model that builds it follows a plan instead of designing one. Set the board's Model
+        and Effort fields to match (docs/engineering-notes/models-and-effort.md).

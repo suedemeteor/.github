@@ -1,0 +1,67 @@
+name: Story
+description: One slice of an epic, delivered by one pull request. Create it as a sub-issue of its epic.
+type: Story
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Title the story in Conventional Commits form, since it becomes the pull request's title: `feat(server): add the account table`. After the prefix, say what the slice does in everyday words, not in the code's own terms.
+
+  - type: textarea
+    id: intent
+    attributes:
+      label: Intent
+      description: What this slice lets someone do, and why now.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Each item must be checkable against the running code.
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: design
+    attributes:
+      label: Design
+      description: >-
+        For a story that touches a view or an email, where its approved mockup is ("the design story #n of this
+        epic" until that story's pull request opens, then the pull request), and "matches the approved mockup"
+        among the criteria above. "This is the design story" for the epic's design story, "Design work of the
+        foundation epic" for its setup, shared components and mockup stories, or "No UI"
+        (docs/engineering-notes/ui-design-skills.md).
+    validations:
+      required: true
+
+  - type: textarea
+    id: plan
+    attributes:
+      label: Implementation Plan
+      description: >-
+        The steps that build it, written in the planning session: which files change and how, and the decisions
+        already made, so the model that builds it follows a plan instead of designing one. Set the board's Model
+        and Effort fields to match (docs/engineering-notes/models-and-effort.md).
+
+  - type: textarea
+    id: tests
+    attributes:
+      label: Tests
+      description: Which test layers it adds or changes (unit, integration, end-to-end, UI).
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of Scope
+      description: What is left for another story.
+
+  - type: textarea
+    id: depends-on
+    attributes:
+      label: Depends On
+      description: Issues that must merge first, as #N.
